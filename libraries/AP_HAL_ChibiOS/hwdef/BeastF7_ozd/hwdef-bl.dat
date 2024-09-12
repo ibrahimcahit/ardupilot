@@ -1,13 +1,13 @@
 
 # hw definition file for processing by chibios_hwdef.py
-# for IFLIGHT_F745_AIO hardware.
+# for IFLIGHT_F745_V1.2_AIO hardware.
 # thanks to betaflight for pin information
 
 # MCU class and specific type
 MCU STM32F7xx STM32F745xx
 
 # board ID for firmware load
-APJ_BOARD_ID 1071
+APJ_BOARD_ID 1453
 
 # crystal frequency, setup to use external oscillator
 OSCILLATOR_HZ 8000000
@@ -21,7 +21,11 @@ FLASH_RESERVE_START_KB 0
 FLASH_BOOTLOADER_LOAD_KB 96
 
 # order of UARTs (and USB)
-SERIAL_ORDER OTG1
+SERIAL_ORDER OTG1 USART1
+
+# USART1
+PA10 USART1_RX USART1
+PA9  USART1_TX USART1
 
 # PA10 IO-debug-console
 PA11 OTG_FS_DM OTG1
